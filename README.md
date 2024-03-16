@@ -1,15 +1,19 @@
 # About me 
 
 ### Education
-- Data Science Immersive Graduate at General Assembly Singapore
-- Masters in Learning and Teaching at University College London (UCL)
-- Bachelor of Science in Mathematics (Education) from Nanyang Technological University (NTU/NIE)
-- Diploma in Education (Credit) from National Institute of Education (NIE)
+|Credential / Certification|Awarding Institution|Duration of Study|
+|--|--|--|
+|Data Science Immersive|General Assembly Singapore| Nov 2023 to March 2024|
+|Masters in Learning and Teaching|University College London (UCL)|Jan 2014 to Dec 2014|
+|Bachelor of Science in Mathematics (Education)|Nanyang Technological University (NTU/NIE)|August 2008 to May 2010|
+|Diploma in Education (Credit)|National Institute of Education (NIE)|August 2006 to May 2008|
 
 ### Work Experience
-- Data Science Instructional Associate at General Assembly
-- Subject Head (Science Department) at MOE
-- Educator at MOE
+|Position|Company|Duration|
+|--|--|--|
+|Data Science Instructional Associate|General Assembly|March 2024 to present|
+|Subject Head (Science Department)|MOE|2018 to 2022|
+|Educator|MOE|2010 to 2024|
 
 # Projects I am proud of
 
