@@ -1,5 +1,5 @@
 title: <img src="assets/img/hello.png" alt="Hello" height="60">
-logo: assets/img/profile_3.jpeg
+logo: <img src ="assets/img/profile_3.jpeg" height = "100">
 description:  Python | Basic SQL | Deep Learning | Data Science Enthusiast | Educator
 # show_downloads: true
 theme: jekyll-theme-minimal
