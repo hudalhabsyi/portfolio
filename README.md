@@ -28,15 +28,15 @@ This project aims to distinguish between Millennials and Gen Z by their language
 
 ### [Project 4: Optimising Hospital Bed Occupancy through Machine Learning](https://github.com/hudalhabsyi/portfolio/tree/main/project_04-optimising-bed-occupancy)
 
-This project aims to distinguish between Millennials and Gen Z by their language use on Instagram comments to advise companies when evaluating their advertising strategies. Using 
+This project explores the use of Time-Series Analysis to predict the bed occupancy rates (BOR) at National University Hospital Singapore (NUHS), so as to guide efficient allocation of manpower and inventory for acute inpatient cases. Apart from the potential to deliver better outcomes for patients and hospital staff, accurate bed forecasting will also allow optimisation of NUHS' running costs through improved manpower rostering and inventory planning (e.g. medical supplies). This is especially crucial in the public healthcare setting, where the accountability of taxpayer monies is important. A cost-benefit analysis is also included to support the group's recommendations to stakeholders.
 
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
 * Exploratory Data Analysis using Pandas and Numpy
-* Using Sklearn for
-  * Preprocessing: StandardScaler
-  * Modelling: Linear Regression, RidgeCV, LassoCV
-  * Evaluation: Mean Squared Error, Root Mean Squared Error, R2 Score
+* Modelling
+  * Preprocessing: Feature Engineering
+  * Modelling: ARIMA, SARIMAX, RNN-LSTM + SARIMA, Linear Regression and Random Forest with Lasso and Ridge regularisation
+  * Evaluation: Root Mean Squared Error (RMSE), R2 Score, Mean Absolute Percentage Error (MAPE)
  
 
 ### [Project 3: "Milking" profits: just knowing how Gen Z and Millennials talk](https://github.com/hudalhabsyi/portfolio/tree/main/project_03-webscraping-genz-vs-millennials)
