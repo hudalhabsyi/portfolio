@@ -41,15 +41,15 @@ This project aims to distinguish between Millennials and Gen Z by their language
 
 ### [Project 3: "Milking" profits: just knowing how Gen Z and Millennials talk](https://github.com/hudalhabsyi/portfolio/tree/main/project_03-webscraping-genz-vs-millennials)
 
-This project aims to distinguish between Millennials and Gen Z by their language use on Instagram comments to advise companies when evaluating their advertising strategies. Using 
+This project aims to distinguish between Millennials and Gen Z by their language use on Instagram comments to advise companies when evaluating their advertising strategies. Using PRAW, two subreddits ([r/Millennials](https://www.reddit.com/r/Millennials/) and [r/GenZ](https://www.reddit.com/r/GenZ/)) were scraped to form the dataset. The data was cleaned and preprocessed using methods like RegEx and TF-IDF Vectorizer, then passed through a variety of models to determine whether they are written by a millennial or GenZ user. A demonstration use case from a live Instagram advertisement is included in the presentation.
 
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
-* Exploratory Data Analysis using Pandas and Numpy
-* Using Sklearn for
-  * Preprocessing: StandardScaler
-  * Modelling: Linear Regression, RidgeCV, LassoCV
-  * Evaluation: Mean Squared Error, Root Mean Squared Error, R2 Score
+* Exploratory Data Analysis using Pandas and Numpy, N-grams
+* Natural Language Processing
+  * Preprocessing: PRAW, RegEx, TF-IDF Vectorizer
+  * Modelling: Logistic Regression with Lasso and Ridge Regularisation, Bernuolli Naive-Bayes, Multinomial Naive-Bayes
+  * Evaluation: Classification Report, Confusion Matrix, R2 Score
 
 
 ### [Project 2: Singapore Housing Modelling](https://github.com/hudalhabsyi/portfolio/tree/main/project_02-singapore-housing-modeling)
