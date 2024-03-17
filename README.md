@@ -1,4 +1,4 @@
-# About me 
+# Hello there ... 
 
 ### Education
 * Data Science Immersive | General Assembly Singapore | Nov 2023 to March 2024 |
@@ -11,19 +11,22 @@
 * Subject Head (Science Department) | MOE | 2018 to 2022 |
 * Educator | MOE | 2010 to 2024 |
 
-# Projects I am proud of
+# Projects I am proud of ...
 
 ### [Capstone Project: The Caterpillar Effect](https://github.com/hudalhabsyi/portfolio/tree/main/project-capstone-the-caterpillar-effect)
 
-This project aims to distinguish between Millennials and Gen Z by their language use on Instagram comments to advise companies when evaluating their advertising strategies. Using 
+This project makes use of neural networks to do a multiclass classification to identify four locally-found caterpillars through image recognition techniques. Four models are explored and the highest performing model is embedded into a Streamlit User Interface for easy user interaction. The user uploads a picture of a caterpillar and receives a response from the model letting them know the species of the caterpillar in the picture. The user then inputs their age, and is then asked to input a prompt into a chatbot powered by OpenAI's Assistant API with Knowledge Retrieval from a loaded corpus. The chatbot should answer using language that is appropriate for the age of the user, and only from the given corpus.
 
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
 * Exploratory Data Analysis using Pandas and Numpy
-* Using Sklearn for
-  * Preprocessing: StandardScaler
-  * Modelling: Linear Regression, RidgeCV, LassoCV
-  * Evaluation: Mean Squared Error, Root Mean Squared Error, R2 Score
+* Modelling
+  * Preprocessing: Image Augmentation, Image Resizing
+  * Modelling: Convolutional Neural Networks (CNN), Transfer Learning, VGG-16, Adam Optimiser, Early Stopping
+  * Evaluation: Classification Report
+* Other relevant information
+  * OpenAI Assistant API with Knowledge Retrieval Function
+  * Streamlit UI to demonstrate application and integration of the above
 
 
 ### [Project 4: Optimising Hospital Bed Occupancy through Machine Learning](https://github.com/hudalhabsyi/portfolio/tree/main/project_04-optimising-bed-occupancy)
@@ -37,6 +40,7 @@ This project explores the use of Time-Series Analysis to predict the bed occupan
   * Preprocessing: Feature Engineering
   * Modelling: ARIMA, SARIMAX, RNN-LSTM + SARIMA, Linear Regression and Random Forest with Lasso and Ridge regularisation
   * Evaluation: Root Mean Squared Error (RMSE), R2 Score, Mean Absolute Percentage Error (MAPE)
+* Streamlit UI to demonstrate the bed occupancy on a given date within 3 months from the current date
  
 
 ### [Project 3: "Milking" profits: just knowing how Gen Z and Millennials talk](https://github.com/hudalhabsyi/portfolio/tree/main/project_03-webscraping-genz-vs-millennials)
