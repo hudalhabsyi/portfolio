@@ -1,10 +1,10 @@
 # About me 
 
 ### Education
-* Data Science Immersive|General Assembly Singapore| Nov 2023 to March 2024|
-* Masters in Learning and Teaching|University College London (UCL)|Jan 2014 to Dec 2014|
-* Bachelor of Science in Mathematics (Education)|Nanyang Technological University (NTU/NIE)|August 2008 to May 2010|
-* Diploma in Education (Credit)|National Institute of Education (NIE)|August 2006 to May 2008|
+* Data Science Immersive (General Assembly Singapore, Nov 2023 to March 2024)
+* Masters in Learning and Teaching (University College London, Jan 2014 to Dec 2014)
+* Bachelor of Science (Education) in Mathematics (Nanyang Technological University, August 2008 to May 2010)
+* Diploma in Education (Credit) (National Institute of Education, August 2006 to May 2008)
 
 ### Work Experience
 |Position|Company|Duration|
