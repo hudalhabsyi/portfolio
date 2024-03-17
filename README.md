@@ -1,4 +1,4 @@
-[](/assets/img/aboutme.png) 
+![](/assets/img/aboutme.png) 
 
 
 ### Education
@@ -17,7 +17,7 @@
 
 
 
-[](/assets/img/myprojects.png) 
+![](/assets/img/myprojects.png) 
 
 ### [Capstone Project: The Caterpillar Effect](https://github.com/hudalhabsyi/portfolio/tree/main/project-capstone-the-caterpillar-effect)
 
