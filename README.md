@@ -1,4 +1,4 @@
-<img src="/assets/img/aboutme.png" alt="About Me" height="60">
+<img src="assets/img/aboutme.png" alt="About Me" height="60">
 
 
 #### Qualifications
@@ -16,7 +16,7 @@
 
 
 
-<img src="/assets/img/myprojects.png" alt="My Projects" height="60">
+<img src="assets/img/myprojects.png" alt="My Projects" height="60">
 
 #### [Capstone Project: The Caterpillar Effect](https://github.com/hudalhabsyi/portfolio/tree/main/project-capstone-the-caterpillar-effect)
 
