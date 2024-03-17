@@ -1,4 +1,5 @@
-# Hello there ... 
+## Hello there ... 
+
 
 ### Education
 * Data Science Immersive | General Assembly Singapore | Nov 2023 to March 2024 |
@@ -6,12 +7,17 @@
 * Bachelor of Science (Education) in Mathematics | Nanyang Technological University | August 2008 to May 2010|
 * Diploma in Education (Credit) | National Institute of Education | August 2006 to May 2008 |
 
+
+
 ### Work Experience
 * Data Science Instructional Associate | General Assembly | March 2024 to present |
 * Subject Head (Science Department) | MOE | 2018 to 2022 |
 * Educator | MOE | 2010 to 2024 |
 
-# Projects I am proud of ...
+
+
+
+## Projects I am proud of ...
 
 ### [Capstone Project: The Caterpillar Effect](https://github.com/hudalhabsyi/portfolio/tree/main/project-capstone-the-caterpillar-effect)
 
