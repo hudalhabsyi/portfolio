@@ -1,7 +1,7 @@
 <img src="assets/img/aboutme.png" alt="About Me" height="60">
 
 
-#### Qualifications
+#### Education
 * Data Science Immersive | General Assembly Singapore | Nov 2023 to March 2024 |
 * Masters in Learning and Teaching | University College London | Jan 2014 to Dec 2014 |
 * Bachelor of Science (Education) in Mathematics | Nanyang Technological University | August 2008 to May 2010|
