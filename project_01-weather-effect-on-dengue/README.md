@@ -10,12 +10,12 @@ Dengue outbreaks have been reported in Singapore as early as 1901 and is still p
 
 There have also been outreach efforts by NEA to the public to reduce mosquito breeding via the BLOCK method and initiatives such as the creation of Gravitrap to trap the female Aedes mosquitoes which are looking for sites to lay their eggs and it prevents the eggs from hatching. 
 
-![Alt text](/images/current_methods.png)
+![Alt text](./images/current_methods.png)
 
 ## What is Project Wolbachia?
 Project Wolbachia Singapore is a project by NEA which studies the feasibility of using Wolbachia-carrying Aedes aegypti males to help suppress the population of these mosquitoes. Wolbachia are naturally-occuring bacteria present in more than 60% of insections. When female mosquitoes from the field, which do not carry Wolbachia, miate with males that carry Wolbachia,the eggs derived from these matings do not hatch. With a supressed population, the expected outcome is that dengue transmission will be reduced hence decreasing the number of dengue fever cases in the country.
 
-![Alt text](/images/suppression.png)
+![Alt text](./images/suppression.png)
 
 
 ## Problem Statement
