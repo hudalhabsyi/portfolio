@@ -42,6 +42,10 @@ This project makes use of neural networks to do a multiclass classification to i
 
 This project explores the use of Time-Series Analysis to predict the bed occupancy rates (BOR) at National University Hospital Singapore (NUHS), so as to guide efficient allocation of manpower and inventory for acute inpatient cases. Apart from the potential to deliver better outcomes for patients and hospital staff, accurate bed forecasting will also allow optimisation of NUHS' running costs through improved manpower rostering and inventory planning (e.g. medical supplies). This is especially crucial in the public healthcare setting, where the accountability of taxpayer monies is important. A cost-benefit analysis is also included to support the group's recommendations to stakeholders.
 
+<img src="assets/img/projects/p4/p4_1.png" alt="My Projects" height="300"><img src="assets/img/projects/p4/p4_2.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p4/p4_3.png" alt="My Projects" height="300"><img src="assets/img/projects/p4/p4_4.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p4/p4_5.png" alt="My Projects" height="300">
+
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
 * Exploratory Data Analysis using Pandas and Numpy
@@ -56,6 +60,10 @@ This project explores the use of Time-Series Analysis to predict the bed occupan
 
 This project aims to distinguish between Millennials and Gen Z by their language use on Instagram comments to advise companies when evaluating their advertising strategies. Using PRAW, two subreddits ([r/Millennials](https://www.reddit.com/r/Millennials/) and [r/GenZ](https://www.reddit.com/r/GenZ/)) were scraped to form the dataset. The data was cleaned and preprocessed using methods like RegEx and TF-IDF Vectorizer, then passed through a variety of models to determine whether they are written by a millennial or GenZ user. A demonstration use case from a live Instagram advertisement is included in the presentation.
 
+<img src="assets/img/projects/p3/p3_1.png" alt="My Projects" height="300"><img src="assets/img/projects/p3/p3_2.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p3/p3_3.png" alt="My Projects" height="300"><img src="assets/img/projects/p3/p3_4.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p3/p3_5.png" alt="My Projects" height="300">
+
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
 * Exploratory Data Analysis using Pandas and Numpy, N-grams
@@ -69,6 +77,9 @@ This project aims to distinguish between Millennials and Gen Z by their language
 
 This project makes use of a dataset from [Kaggle](https://www.kaggle.com/competitions/dsi-sg-project-2-regression-challenge-hdb-price/data) to predict the house prices using a linear regression model with ridge regularisation. Our model concudes that HDB prices are cheapest in non-mature estates in the North, West and North-east regions in Singapore. As an example, three case studies are explored and recommendations are made based on the data available. Finally, the project also considers certain factors (e.g. noise level, floor plan or orientation of unit) that are not found in the dataset for possible future work opportunities.
 
+<img src="assets/img/projects/p2/p2_1.png" alt="My Projects" height="300"><img src="assets/img/projects/p2/p2_2.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p2/p2_3.png" alt="My Projects" height="300"><img src="assets/img/projects/p2/p2_4.png" alt="My Projects" height="300">
+
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
 * Exploratory Data Analysis using Pandas and Numpy
@@ -81,6 +92,10 @@ This project makes use of a dataset from [Kaggle](https://www.kaggle.com/competi
 #### [Project 1: Data Analysis of Singapore Weather Conditions and its Effects on the Number of Dengue Cases](https://github.com/hudalhabsyi/portfolio/tree/main/project_01-weather-effect-on-dengue)
 
 This project aims to analyse trends in Singapore weather and the number of dengue cases between 2014 to 2018. This analysis can be used to help the National Environment Agency plan optimal time periods for the release of the male Wolbachia-Aedes mosquitoes into the environment to enhance effectiveness of Project Wolbachia, which can curb dengue transmission to decrease the number of dengue cases. We conclude that the number of dengue cases spikes approximately 1 month after rainfall and temperature spikes are seen in weather data. Our recommendations are for the NEA to consider timing the release of Wolbachia-Aedes mosquitoes 2-4 weeks before an expected spike in temperature and/or rainfall to maximise cost-efficiency and optimise the use of resources, including but not limited to manpower and community outreach programmes, while reducing the possible ecological impact of each release.
+
+<img src="assets/img/projects/p1/p1_1.png" alt="My Projects" height="300"><img src="assets/img/projects/p1/p1_2.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p1/p1_3.png" alt="My Projects" height="300"><img src="assets/img/projects/p1/p1_4.png" alt="My Projects" height="300">
+<img src="assets/img/projects/p1/p1_5.png" alt="My Projects" height="300">
 
 **Skills and Concepts:**
 * Basic statistics and probability
