@@ -1,199 +1,118 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Exploring Climate Data of Singapore
-
-### Overview
-
-Our first module in DSI covers:
-- Basic statistics and probability
-- Many Python programming concepts
-- Programmatically interacting with files and directories
-- Visualizations
-- EDA
-- Working with Jupyter notebooks for development and reporting
-
-You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practise and demonstrate these skills.
-
-For our first project, we're going to analyze climate trends in Singapore. Climate refers to the general weather conditions prevailing over an area for a long period. There are several aspects to studying climate that includes rainfall, temperature, relative humidity, wet build temperature, sunshine duration etc.
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Data Analysis of Singapore Weather Conditions and its Effects on the Number of Dengue Cases
 
 
-### Problem Statement
+## Introduction
+Dengue fever is a mosquito-borne viral illness that is common in tropical and subtropical climates, transmitted through the bite of an infected Female Aedes mosquito (aka the vector). 
 
-Generally speaking, you will be asked to come up with a data science problem. This problem is ultimately up to you, but below are some guidelines/ things to consider when crafting a problem statement:
-> 1. Consider your audience. Who is your project going to help? Who will your presentation be geared towards? Establishing your audience first can help you narrow down your scope.
-> 2. Consider the data you will use. Based on the content of this data, think about some questions you could reasonably answer. These questions should aim to solve some kind of problem.
-> 3. Based on these questions, what would bring some kind value to your audience? This can be business insights, increase sales, make decisions, etc.
-> 4. Put everything from the above steps together into a few sentences that describe the specific problem you are trying to solve and who it will benefit.
-> [Here is a blog post](https://towardsdatascience.com/defining-a-data-science-problem-4cbf15a2a461) about crafting a data science problem statement.
+According to research, with global warming causing a change in climate, dengue transmission can possibly be exacerbated. Relative humidity, rainfall and temperature are some weather conditions that are associated with mosquito vector survival. The typical life cycle of Aedes Aegypti mosquito takes up to 4 weeks. Mean temperatures above 27.5 degrees Celsius are shown to be optimal for the survival of the mosquitoes and temperatures between 25 degrees Celsius to 32 degrees Celsius accelerates the life cycle of the mosquito vectors.
 
-Here are some example prompts if you need inspiration:
-> * You work for the Singapore tourism and you are required to advice tourist who visit Singapore and love being outdoors, on how they can be prepared based on their travel months.
-> * You work for a local delivery-app and you want to use weather to better plan your operations.
-> * You are hired by Meteorological Services Singapore to analyze weather trends in Singapore and identify businesses that might be interested to use them.
-> * You are an outdoor event planner. After covid, you want to create events that families can come and enjoy. 
-> * *Feel free to be creative with your own prompt!*
+Dengue outbreaks have been reported in Singapore as early as 1901 and is still prevalent today, with NEA (National Environment Agency) monitoring multiple dengue clusters in Singapore and deinfining them into 3 categories - [Red Alert, Yellow Alert, Green Alert](https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters). 
 
-And here are some example problem statements related to the above prompts. Come up with your own or modify these for your needs:
-> * Weather in Singapore are largely sunny or rainy. However, tourists who are not familiar with local weather conditions may be caught off guard, causing their plans to be disrupted. This project aims to analyse trends in Singapore weather to identify adverse conditions for tourists who enjoy being outdoor. This analysis can help tourist plan travel period and itinerary better, bringing home a pleasant experience.
-> * You are working for a local delivery services company. Every year, delivery operations and customer demand are heavily impacted by rainy weather conditions. This can be circumvented if the company can plan for such conditions beforehand. This project aims to analyse the monthly weather patterns over the year to allow the operations team to better plan and allocate resources during the rainy seasons.
-> * *Feel free to be creative with your own problem statement!*
+There have also been outreach efforts by NEA to the public to reduce mosquito breeding via the BLOCK method and initiatives such as the creation of Gravitrap to trap the female Aedes mosquitoes which are looking for sites to lay their eggs and it prevents the eggs from hatching. 
 
----
+![Alt text](/images/current_methods.png)
 
-### Datasets
+## What is Project Wolbachia?
+Project Wolbachia Singapore is a project by NEA which studies the feasibility of using Wolbachia-carrying Aedes aegypti males to help suppress the population of these mosquitoes. Wolbachia are naturally-occuring bacteria present in more than 60% of insections. When female mosquitoes from the field, which do not carry Wolbachia, miate with males that carry Wolbachia,the eggs derived from these matings do not hatch. With a supressed population, the expected outcome is that dengue transmission will be reduced hence decreasing the number of dengue fever cases in the country.
 
-#### Provided Data
+![Alt text](/images/suppression.png)
 
-There are 2 datasets included in the [`data`](./data/) folder for this project. These correspond to rainfall information. 
 
-* [`rainfall-monthly-number-of-rain-days.csv`](./data/rainfall-monthly-number-of-rain-days.csv): Monthly number of rain days from 1982 to 2022. A day is considered to have “rained” if the total rainfall for that day is 0.2mm or more.
-* [`rainfall-monthly-total.csv`](./data/rainfall-monthly-total.csv): Monthly total rain recorded in mm(millimeters) from 1982 to 2022
+## Problem Statement
+High incidences of dengue fever is a persistent issue in Singapore despite measures taken by the government to curb it. For example, an increase in rainfall could lead to an increase in the population of mosquitoes, which in turn leads to higher incidences of dengue fever. 
 
-Other relevant weather datasets from [data.gov.sg](https://data.gov.sg/search) that you can download and use are as follows:
+With the implementation of Project Wolbachia, the drop in the number of dengue cases has been observed. However, the release of Wolbachia mosquitoes are currently carried out on a weekly basis, which could be resource intensive and have a negative ecological impact.
 
-* [Relative Humidity](https://data.gov.sg/dataset/relative-humidity-monthly-mean)
-* [Monthly Maximum Daily Rainfall](https://data.gov.sg/dataset/rainfall-monthly-maximum-daily-total)
-* [Hourly wet bulb temperature](https://data.gov.sg/dataset/wet-bulb-temperature-hourly)
-* [Monthly mean sunshine hours](https://data.gov.sg/dataset/sunshine-duration-monthly-mean-daily-duration)
-* [Surface Air Temperature](https://data.gov.sg/dataset/surface-air-temperature-mean-daily-minimum)
+As mosquito activity is highly influenced by weather conditions, this project aims to analyse trends in Singapore weather and the number of dengue cases between 2014 to 2018. This analysis can be used to help NEA plan optimal time periods for the release of the male Wolbachia-Aedes mosquitoes into the environment to enhance effectiveness of Project Wolbachia. This can in turn curb dengue transmission to decrease the number of dengue cases.
 
-**Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
 
-#### Additional Data
-You can also use other datasets for your analysis, make sure to cite the source when you are using them.
 
----
+## Datasets
+The following data sets will be used for the project:
+Source: data.gov.sg
 
-### Deliverables
+* Relative Humidity (monthly mean) from 1982-2022 (RelativeHumidityMonthlyMean.csv)
+* Number of rain days (monthly) from 1982-2022 (rainfall-monthly-number-of-rain-days.csv)
+* Total amount of rainfall (in mm) from 1982-2022 (rainfall-monthly-total.csv)
+* Temperature (monthly mean) from 1982-2022 (SurfaceAirTemperatureMonthlyMean.csv)
+* Number of Dengue and Dengue Haemorrhagic Fever (DHF) in Singapore (by week) from 2014 - 2018 (dengue_cases.csv)
 
-All of your projects will comprise of a written technical report and a presentation. As we continue in the course, your technical report will grow in complexity, but for this initial project it will comprise of:
-- A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- A README markdown file the provides an introduction to and overview of your project.
-- Your presentation slideshow rendered as a .pdf file.
-**NOTE**: Your entire Github repository will be evaluated as your technical report. Make sure that your files and directories are named appropriately, that all necessary files are included, and that no unnecessary or incomplete files are included.
+However for consistency and comparability across all data sets, the data from the period 2014 to 2018 will be used for analysis only.
 
-For your first presentation, you'll be presenting to a **non-technical** audience. You should prepare a slideshow with appropriately scaled visuals to complement a compelling narrative. **Presentation duration will be 15 minutes.**
+ ### Data dictionary:
+|Feature|Type|Source|Dataset|Description|
+|---|---|---|---|---|
+|total_rainfall|float|GA|rainfall-monthly-total.csv|Total rainfall in Singapore from Jan 1982 to Aug 2022 (units in mm)|
+|rainy_day|integer|GA|rainfall-monthly-number-of-rain-days.csv|Number of rainy days in Singapore from Jan 1982 to Aug 2022 (units in days)|
+|humidity|float|NEA|RelativeHumidityMonthlyMean.csv|Measure of the relative humidity in Singapore from Jan 1982 to Aug 2022 (units in %)|
+|temperature|float|NEA|SurfaceAirTemperatureMonthlyMean.csv|Measure of the temperature of the air in Singapore from Jan 1982 to Aug 2022 (units in deg Celsius)|
+|merged_2014_2018|mixed|mixed|rainfall-monthly-total.csv, rainfall-monthly-number-of-rain-days.csv, RelativeHumidityMonthlyMean.csv, SurfaceAirTemperatureMonthlyMean.csv|A combination of data that describes the general weather conditions in Singapore from 2014 to 2018. Conditions include temperature, relative humidity, number of rainy days and total monthly rainfall, by month-year.|
+|dengue_cases|integer|NEA|dengue_cases.csv|Number of dengue cases in Singapore from 2014 to 2018. Number of dengue cases is the total number of cases of Dengue and Dengue Haemorraging Fever.
 
----
 
-### Technical Report Starter Code
 
-Future projects will require you to decide on the entire structure of your technical report. Here, we provide you with [starter code](./code/starter-code.ipynb) in a Jupyter notebook that will help to guide your data exploration and analysis. **If you choose to edit the core structure of this notebook, make sure you don't exclude any of the requested operations**.
+## Summary of Analysis
+The 5 datasets were obtained in csv formats from GA (given to us) and from [data.gov.sg]("https://beta.data.gov.sg/"). 
+There are 3 areas that we focus on:
 
----
+#### First spike in dengue cases in mid 2014
+- As weather conditions such as rainy days and total rainfall increased towards mid 2014, the increase in dengue cases was observed to peak during the similar period.
 
-### Suggested Resources
+#### Second spike in dengue cases at the start of 2016
+- Towards Nov 2015, rainfall and temperature spiked. The peak in the number of dengue cases was delayed by approximately 1 month after the peak of the respective weather conditions.
+    - The peak of the rainfall and temperature values are observed to coincide with the start of the increase in number of dengue cases.
+    
+#### General trend after 2016
+- From Oct 2016 onwards, the number of dengue cases dropped even though there were spikes/ drops in rainfall, temperature and relative humidity.
+    - Despite the typical spike in rainfall/ temp occurring at the end of 2016, further analysis of the dengue cases profile did not suggest an increase in number of infections.
+    - In fact, there was a drop in number of dengue cases from Oct 2016 (based on the line plots) .
+    - Number of dengue cases also did not drastically increase despite spikes in weather conditions in December 2016, compared to prior of project launch.
 
-Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
 
-[Here's a great summary](https://towardsdatascience.com/storytelling-with-data-a-data-visualization-guide-for-business-professionals-97d50512b407) of the main points of the book _Storytelling with Data_, which I can't recommend enough. [Here's a blog post](http://www.storytellingwithdata.com/blog/2017/8/9/my-guiding-principles) by the author about his guiding principles for visualizations.
 
----
+## Conclusion & Recommendations
+### Key Takeaways:
 
-### Submission
+#### Given a known estimate of the weather conditions' profiles and their relationship with number of dengue cases, the spike in dengue cases could be determined:
+- Dengue cases spikes approximately 1 month after rainfall and temperature spikes (humidity will drop due to inverse relationship with temperature)
+    - Peak/dips in weather profile suggests initial increase in dengue cases
+- According to available research, the optimal temperature for the survival of Aedes aegypti has a mean of 27.5 deg C, similar to the trend seen in the line plot.
 
-**Materials must be submitted through your GitHub account repo shared with the Teaching Team by scheduled due date.**
+#### Effectiveness of Project Wolbachia cannot be discounted
+- The launch of the project coincided not only with the reduction of dengue cases, but also in suppression of the spike of dengue cases in the same time frame. 
 
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
 
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis (renamed to describe your project)
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
+### Recommendations:
 
-**Tip:** You can find a good example executive summary [here](https://www.proposify.biz/blog/executive-summary) for your README.md.
+#### Time-specific release of Wolbachia-Aedes aegypti
 
----
+* Release of Wolbachia mosquitoes are recommended to be 2-4 weeks before the spike in rainfall/ temperature profile 
+    - spikes in rainfall/temperature suggests initial increase in dengue cases
+    - closely related to the life cycle of the Aedes mosquitoes
+    - takes into consideration the time NEA requires to breed the mosquitoes
+    - to maximise cost-efficiency and optimise the use of resources such as manpower while reducing ecological impact 
 
-### Presentation Structure
 
-- **Presentation Time: 15 minutes**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to a non-technical audience (executives with the College Board, school administrators, admissions counselors, State officials, etc.).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
+#### Prediction of profiles in spikes or drops in weather conditions is crucial in planning for mosquito release
+- Potential for higher precision in prediction of weather conditions from wide availability of past historical data for analysis
+- Partnership with meteorological services for minimal error in predictions can be explored
+    - In view of this partnership, NEA can also continue to make use of the [GEOJSON maps]("https://beta.data.gov.sg/collections?query=dengue%20(cases)") that they have already been using to pinpoint clusters all around Singapore
 
-Be sure to rehearse and time your presentation before class.
 
----
+## References
 
-### Rubric
-Teaching team will evaluate your project using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
+### Research Articles:
+- [Drakou, K., Nikolaou, T., Vasquez, M., Petric, D., Michaelakis, A., Kapranas, A., Papatheodoulou, A., & Koliou, M. (2020). The Effect of Weather Variables on Mosquito Activity: A Snapshot of the Main Point of Entry of Cyprus. International journal of environmental research and public health, 17(4), 1403. https://doi.org/10.3390/ijerph17041403]("https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7068582/)
+- [Ho SH, Lim JT, Ong J, Hapuarachchi HC, Sim S, Ng LC (2023) Singapore’s 5 decades of dengue prevention and control—Implications for global dengue control. PLoS Negl Trop Dis 17(6): e0011400. https://doi.org/10.1371/journal.pntd.001140](https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0011400)
+- [Reinhold, J. M., Lazzari, C. R., & Lahondère, C. (2018). Effects of the Environmental Temperature on Aedes aegypti and Aedes albopictus Mosquitoes: A Review. Insects, 9(4), 158. https://doi.org/10.3390/insects9040158](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6316560/#B24-insects-09-00158)
 
-**Note:** Presentation will be done as a group while codes will be prepared and submitted by each student.
+### Government Websites relating to weather & Project Wolbachia
+- [Vector-Borne Diseases Research Programme](https://www.nea.gov.sg/corporate-functions/resources/research/vector-borne-diseases-research-programme)
+- [Wolbachia-Aedes Mosquito Suppression Strategy](https://www.nea.gov.sg/corporate-functions/resources/research/wolbachia-aedes-mosquito-suppression-strategy), 
+- [Climate in Singapore](https://www.weather.gov.sg/climate-climate-of-singapore/)
+- [Mosquito release schedule](https://www.nea.gov.sg/corporate-functions/resources/research/wolbachia-aedes-mosquito-suppression-strategy/wolbachia-aedes-release-schedule)
 
-**Project will be evaluated on the three levels as below for each item in the rubric.** <br>
-
-| Evaluation Criteria |
-| ----- |
-| *Below expectations* |
-| *Meets expectations* |
-| *Exceeds expectations* |
-
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
-
-**Clarity of Message**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the project?
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
-
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Does the student demonstrate mastery masking in Pandas?
-- Does the student demonstrate mastery sorting in Pandas?
-
-**Data Cleaning and EDA**
-- Does the student fix data entry issues?
-- Are data appropriately labeled?
-- Are data appropriately typed?
-- Are datasets combined correctly?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
-
-**Visualizations**
-- Are the requested visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
-
-**Research and Conceptual Understanding**
-- Were useful insights gathered from outside sources?
-- Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
-
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
-
-*In order to pass the project, students must earn a minimum score of 'Meets Expectations' for each section*.
-- Earning a *'Below Expectations'* in one or more of the above section would result in a failing project and require a redo.
-- Sections evaluated to be *'Below Expectations'* will be accompanied with instructor comments.
-- While a minimum of *'Meets Expectations'* in each section is the required threshold for graduation, students should aim to score higher. While it may be passing, students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
-
-### REMEMBER:
-
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+### Other sources regarding Project Wolbachia/ dengue-related information
+- ["Project Wolbachia: 300 million mosquitoes released but not a silver bullet to deal with dengue, says NEA"](https://www.channelnewsasia.com/singapore/project-wolbachia-mosquito-dengue-nea-facility-3773176)
+- [CNA Explains: Why is Singapore at risk of a surge in dengue cases?](https://www.channelnewsasia.com/singapore/dengue-clusters-surge-aedes-mosquito-toa-payoh-3753571)
+- [Singapore's dengue emergency](https://edition.cnn.com/2022/06/06/asia/health-dengue-singapore-emergency-climate-heat-intl-hnk/index.html)
