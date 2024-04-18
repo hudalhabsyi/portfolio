@@ -22,7 +22,7 @@
 
 This project makes use of neural networks to do a multiclass classification to identify four locally-found caterpillars through image recognition techniques. Four models are explored and the highest performing model is embedded into a Streamlit User Interface for easy user interaction. The user uploads a picture of a caterpillar and receives a response from the model letting them know the species of the caterpillar in the picture. The user then inputs their age, and is then asked to input a prompt into a chatbot powered by OpenAI's Assistant API with Knowledge Retrieval from a loaded corpus. The chatbot should answer using language that is appropriate for the age of the user, and only from the given corpus.
 
-<img src="assets/img/projects/p5/p5_2.png" alt="My Projects" height="150">\t<img src="assets/img/projects/p5/p5_3.png" alt="My Projects" height="150">   <img src="assets/img/projects/p5/p5_4.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_5.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_6.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_7.png" alt="My Projects" height="150">
+<img src="assets/img/projects/p5/p5_2.png" alt="My Projects" height="150"><\t><img src="assets/img/projects/p5/p5_3.png" alt="My Projects" height="150">   <img src="assets/img/projects/p5/p5_4.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_5.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_6.png" alt="My Projects" height="150"><img src="assets/img/projects/p5/p5_7.png" alt="My Projects" height="150">
 
 **Skills and Concepts:**
 * Visualisations using matplotlib.pyplot and seaborn
