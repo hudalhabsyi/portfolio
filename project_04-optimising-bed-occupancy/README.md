@@ -1,12 +1,12 @@
-<img src="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png" style="float: left; margin: 5px; height: 70px">
+<img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 5px; height: 70px">
 
 # Optimising Hospital Bed Occupancy through Machine Learning
 **DSI-41 Group FWSG**: Muhammad Faaiz Khan, Sharifah Nurulhuda, Tan Wei Chiong, Gabriel Tan
 
 ---
 
-## Background and Introduction 
-
+#### Background and Introduction 
+___
 
 Singapore's public healthcare system has faced [hospital bed crunch issues since at least 2010](https://news.sma.org.sg/4203/In_Sight.pdf). This may be attributed at least in part to [Singapore’s aging population](https://www.todayonline.com/singapore/ageing-society-contributes-hospital-bed-crunch-gan).
 
@@ -39,7 +39,7 @@ The BOR statistics are [calculated based on the midnight bed census at each hosp
 
 As each healthcare cluster and their constituent hospitals operate relatively independently, [serving different regions in Singapore](https://www.channelnewsasia.com/singapore/healthiersg-regional-health-manager-healthcare-cluster-nuhs-nhg-singhealth-2965946), this project will focus exclusively on BOR predictions for **NUH**.
 
-## Objectives
+#### Objectives
 ___
 
 **Problem Statement**:
@@ -75,8 +75,8 @@ With the chosen algorithm, a dashboard application could be developed using such
 - Apart from the potential to deliver better outcomes for patients and hospital staff as described in the preceding sub-section, accurate bed forecasting will also allow optimisation of NUHS' running costs through improved manpower rostering and inventory planning (e.g. medical supplies). This is especially crucial in the public healthcare setting, where the accountability of taxpayer monies is important.
 
 
-## Data Dictionary
-
+#### Data Dictionary
+____
 |Feature name|Type|Description|
 |---|---|---|
 |`date`|datetime64[ns]|The date for the respective data point|
@@ -91,8 +91,8 @@ With the chosen algorithm, a dashboard application could be developed using such
 |`diarrhea`|int|The number of diarrhea cases on the day that the data point occurs in|
 |`nuh`|float|The percentage of beds that are occupied in NUH on the day that the respective data point occurs in|
 
-## Model Evaluation
-
+#### Model Evaluation
+___
 
 We ran the data through two types of modelling:
 * Regression Models (Linear Regression, Ridge CV, Lasso CV, Random Forest)
@@ -150,8 +150,8 @@ past the test set, and then use those predicted $X$ values as $X$ input to SARIM
 * However, we acknowledge that this model will face similar issues as the SARIMA model, where predictions beyond the near future may not be as accurate due to unstability when extrapolated further in time.
 
 
-## Cost-Benefit Analysis
-
+#### Cost-Benefit Analysis
+___
 
 
 
@@ -193,16 +193,16 @@ past the test set, and then use those predicted $X$ values as $X$ input to SARIM
 - Estimated OT man-hour rate for staff nurse (based on monthly base salary of $3,000/4 weeks/42hrs * 1.5 OT rate): https://www.hseu.org.sg/wps/wcm/connect/4bd241f4-d006-4edb-ba27-f7cec483954b/NUHS+Collective+Agreement+2022.pdf?MOD=AJPERES
 - Other hospital running costs based on ballpark estimates
 
-## Assumptions and Limitations
-
+#### Assumptions and Limitations
+___
 
 The availability of public data for BOR was restricted to only 2018 onwards, which makes it challenging for us to identify potential longer term (seasonality) patterns in our exogenous (X) features.
 - Compounding the problem is the fact that the data from 2020 to 2021 was highly anomalous - due to the [Covid-19 situation and nationwide efforts across healthcare institutions to contain the pandemic](https://www.nuhs.edu.sg/About-NUHS/Newsroom/Documents/NUHS-COVID-19-Commemorative-Book.pdf)
 - Therefore data from 2020-2021 was **excluded** from our modeling, resulting in only the most recent 2022-2023 data being used. With more runway and post-pandemic 2024 data, our production algorithm is likely to be even more accurate
 - Unlike BOR, daily data was also not available for certain features such as infectious diseases - an assumption was made to average the weekly data over 7 days for such features
 
-## Conclusions and future work
-
+### Conclusions and future work
+___
 
 The deep learning model (LSTM RNN) shows the greatest promise as a production algorithm for our BOR time series predictions. Despite the limitations around public-available statistics and the length of post-Covid BOR data, it shows a strong predictive ability on unseen data, with minimal requirement for supplementary features.
 

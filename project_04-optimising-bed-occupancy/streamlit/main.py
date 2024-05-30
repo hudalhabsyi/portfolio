@@ -1,5 +1,3 @@
-# python -m streamlit run c:/Users/Aspire/Documents/GA/Faaiz-Khan/project_4/streamlit-widget/main.py
-
 from datetime import date, datetime
 import pandas as pd
 import streamlit as st
@@ -8,7 +6,7 @@ import dict
 import matplotlib.pyplot as plt
 
 
-# Remove annoying warning
+# Remove warning
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 df = pd.DataFrame(dict.dict)
