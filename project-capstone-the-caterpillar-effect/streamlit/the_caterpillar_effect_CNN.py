@@ -17,6 +17,9 @@ from openai import OpenAI
 import time
 import streamlit as st
 
+#creating environment for the api key
+import os
+os.environ['OPENAI_API_KEY'] = st.secrets['open_ai_key']
 
 
 
@@ -34,7 +37,7 @@ import streamlit as st
 
 
 # Create an OpenAI client with your API key
-client = OpenAI(api_key= st.secrets['open_ai_key'])
+client = OpenAI(api_key= 'OPENAI_API_KEY')
 
 assistant_id = 'asst_2Ll2geL6xFhcqysisEhsHOcP'
 
