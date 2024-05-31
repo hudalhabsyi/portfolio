@@ -34,33 +34,60 @@ import streamlit as st
 
 
 # Create an OpenAI client with your API key
-client = OpenAI(api_key='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')
+client = OpenAI(api_key= 'open_ai_key' )
 
 assistant_id = 'asst_2Ll2geL6xFhcqysisEhsHOcP'
 
 # Retrieve the assistant you want to use
 assistant = client.beta.assistants.retrieve(assistant_id)
 
-# Upload the four files with an "assistants" purpose
-pansy_file = client.files.create(
+# Upload the files with an "assistants" purpose
+pansy_file_1 = client.files.create(
     file=open("../documents/chocolate_pansy/Chocolate_Pansy_Butterflies of Singapore_ Life History of the Chocolate Pansy.html", "rb"),
     purpose='assistants'
 )
-lime_file = client.files.create(
+pansy_file_2 = client.files.create(
+    file=open("../documents/chocolate_pansy/Chocolate_Pansy_Nepal_Desk.html", "rb"),
+    purpose='assistants'
+)
+pansy_file_3 = client.files.create(
+    file=open("../documents/chocolate_pansy/Chocolate_Pansy_Junonia_iphita_Wikipedia.html", "rb"),
+    purpose='assistants'
+)
+
+lime_file_1 = client.files.create(
     file=open("../documents/lime_caterpillar/2Lime_Butterfly_Butterflies of Singapore_ Life History of the Lime Butterfly v2.0.html", "rb"),
     purpose='assistants'
 )
-pj_file = client.files.create(
+lime_file_2 = client.files.create(
+    file=open("../documents/lime_caterpillar/Lime_Butterfly_Butterflies of Singapore_ Life History of the Lime Butterfly v2.0.html", "rb"),
+    purpose='assistants'
+)
+lime_file_3 = client.files.create(
+    file=open("../documents/lime_caterpillar/Papilio demoleus - Wikipedia.html", "rb"),
+    purpose='assistants'
+)
+
+pj_file_1 = client.files.create(
     file=open("../documents/painted_jezebel/Painted_Jezebel_Butterflies of Singapore_ Butterfly of the Month - December 2010.html", "rb"),
     purpose='assistants'
 )
-tiger_file = client.files.create(
+pj_file_2 = client.files.create(
+    file=open("../documents/painted_jezebel/Delias hyparete - Wikipedia.html", "rb"),
+    purpose='assistants'
+)
+
+tiger_file_1 = client.files.create(
     file=open("../documents/plain_tiger/Plain_Tiger_Butterflies of Singapore_ Butterfly of the Month - October 2016.html", "rb"),
+    purpose='assistants'
+)
+tiger_file_2 = client.files.create(
+    file=open("../documents/plain_tiger/Danaus chrysippus - Wikipedia.html", "rb"),
     purpose='assistants'
 )
 
 #define list of file IDs
-uploaded_file_ids = [pansy_file.id, lime_file.id, pj_file.id, tiger_file.id]
+uploaded_file_ids = [pansy_file_1.id, pansy_file_2.id, pansy_file_3.id, lime_file_1.id, lime_file_2.id, lime_file_3.id, pj_file_1.id, pj_file_2.id, tiger_file_1.id, tiger_file_2.id]
 
 
 
@@ -213,7 +240,7 @@ if prompt := st.chat_input(f'What would you like to know about {caterpillar_name
                     messages=[
                         {
                             "role": "user",
-                            "content": f"Answer the {prompt} as you would to someone who is {age} years old, using only the information about the {caterpillar_name} in the uploaded files.",
+                            "content": f"Answer the {prompt} as you would to someone who is {age} years old, using only the information about the {caterpillar_name} in the uploaded files. If questions are asked about anything other than {caterpillar_name}, give the following answer: 'I can only answer questions based on the identified caterpillar. Please ask a different question related to {caterpillar_name} only.'",
                             "file_ids": uploaded_file_ids,
                         }
                     ]
