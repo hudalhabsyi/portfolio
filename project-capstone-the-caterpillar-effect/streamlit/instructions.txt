@@ -1,4 +1,0 @@
-Note:
-Run the notebooks to get the 4 .keras files 
-Copy the 4 .keras files into the streamlit folder
-Then run the models if needed
