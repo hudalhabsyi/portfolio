@@ -10,7 +10,8 @@
 
 
 #### Work Experience
-* Data Science Instructional Associate | General Assembly | March 2024 to present |
+* Data Specialist | National Institute of Education | July 2024 to present
+* Data Science Instructional Associate | General Assembly | March 2024 to May 2024 |
 * Subject Head (Science Department) | MOE | 2018 to 2022 |
 * Educator | MOE | 2010 to 2024 |
 
